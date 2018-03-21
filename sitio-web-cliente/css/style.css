@@ -1,0 +1,148 @@
+body{
+	background-image: url(../img/fondo.jpg);
+	color:white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+
+
+.div-title{
+	text-align: center;
+}
+
+.div-adorno{
+    width: 25%;
+    height:3px;
+    background-color: #696969;
+    margin: 0 auto;
+    border-radius: 99%;
+}
+
+
+.div-enlace{
+	text-align: center;
+	padding-top: 20px;
+}
+
+.div-tabla{
+	padding: 20px 0;
+}
+
+table{
+	margin: 0 auto;
+}
+
+.div-formulario{
+	padding: 20px 0;
+	text-align: center;
+	width:50%;
+	margin: 10px auto;
+	background-color: rgba(69,69,69,0.2);
+	border-radius: 15px;
+}
+
+.div-campoForm{
+	display: block;
+	padding: 10px 0;
+}
+
+.div-enviar{
+	padding-top: 20px;
+	text-align: center;
+}
+
+.seccion_apartados{
+
+	margin:0 auto;
+	
+}
+
+.div-apartados{
+	overflow: auto;
+	width: 80%;
+	margin: 0 auto;
+
+
+}
+
+.div-apartados .apartado{
+	width: 30%;
+	height: 200px;
+	background-color: rgba(69,69,69,0.2);
+	float: left;
+	text-align: center;
+	margin: 0 10px;
+	border-radius: 15px;
+
+}
+
+.div-corte{
+	clear: both;
+}
+
+.div-operaciones{
+	text-align: center;
+	border-top: 1px solid white;
+}
+
+.calculadora{
+	text-align: center;
+}
+
+.div-acciones{
+    padding: 20px 0;
+    text-align: center;
+    width:50%;
+    margin: 10px auto;
+    background-color: rgba(69,69,69,0.2);
+    border-radius: 15px;
+}
+
+.leftCol{
+    width: 50%;
+    float: left;
+}
+
+.rightCol{
+    width: 50%;
+    float: left;
+}
+
+.tablaProductos th{
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.tablaProductos td{
+    padding: 10px 10px;
+    text-align: center;
+    
+}
+
+#tablaBodyProductos{
+    background-color: rgba(69,69,69,0.2);
+    border-radius: 15px;   
+}

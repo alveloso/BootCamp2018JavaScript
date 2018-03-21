@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Index</title>
+		<meta charset="utf-8">
+		<!--Comentarioooooo-->
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<nav>
+			<ul>
+			  <li><a href="./html/form.html">PRODUCTOS</a></li>
+			</ul>
+		</nav>
+
+		<div class="div-title">
+			<h1>PRODUCTOS</h1>
+		</div>
+		<div class="div-adorno"></div>
+
+		<div class="leftCol">
+			<div class="div-title">
+				<h2>FORMULARIO</h2>
+			</div>
+			<div class="div-formulario">
+				<form action="#">
+					<div class="div-campoForm">
+						<input type="text" name="idProducto" id="idProducto" placeHolder="Id producto">
+					</div>
+					<div class="div-campoForm">
+						<input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre">
+					</div>
+					<div class="div-campoForm">
+						<input type="number" name="cantidad" id="cantidad" placeholder="Cantidad">
+					</div>
+
+					<div class="div-campoForm">
+						<textarea  rows="5" cols="18" name="descripcion" id="descripcion" placeholder="Descripcion"></textarea>
+					</div>
+				</form>
+			</div>
+
+			<div class="div-acciones">
+				<input type="button" name="botonAniadir" value="Añadir" onclick="aniadirProducto()">
+				<input type="button" name="botonAniadir" value="Eliminar">
+				<input type="button" name="botonAniadir" value="Actualizar">
+			</div>
+		</div>
+
+		<div class="rightCol">
+			<div class="div-title">
+				<h2>LISTADO DE PRODUCTOS</h2>
+			</div>
+			<div class="tablaProductos">
+				<table>
+					<thead>
+						<th>Id producto</th>
+						<th>Nombre</th>
+						<th>Cantidad</th>
+						<th>Descripción</th>
+					</thead>
+					<tbody id="tablaBodyProductos">
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="div-corte"></div>
+
+		<script src="./js/productos.js"></script>
+	</body>
+
+	<footer>
+		
+	</footer>
+	</body>
+</html>
