@@ -93,21 +93,37 @@ function addLineToHTMLTable(producto, referenciaTable) {
 //Funciones para borrar producto
 function borrarProducto(){
 
+	//Recojo id de la fila que quiero borrar del formulario
 	var idBorrar = document.getElementById("idBorrar").value;
+
+	//Recojo la tabla para manipularla
 	var tabla = document.getElementById("tablaBodyProductos");
+
+	//Saco las filas para ir recorriendola con un for
 	var numRegistros =  tabla.rows.length;
+
+	//Bandera parar borrar
 	var flagBorrar =false;
 
+	//Si no hay nada en la tabla no tiene sentido buscar
 	if(numRegistros == 0){
 		alert("Te das cuenta de que estás intentando borrar en una tabla vacía... verdad?");
 	}else{
+
+		//Sino empiezo a recorrerla
 		for(var r = 0; r < numRegistros; r++){
+
+			//Si encuentro el id cambio la bandera
 			if(tabla.rows[r].firstChild.innerHTML == idBorrar){
 				flagBorrar = true;
+
+				//Tengo que salir porque si borro durante el recorrido me salta un error en consola
+				//Al readaptarse la tabla y seguir con el for
 				break;
 			}
 	    }
 
+	    //Si se confirma que he encontrado el registro borro, sino aviso de que no se ha encontrado
 	    if(flagBorrar){
 			tabla.deleteRow(r);
 		}else{
@@ -116,16 +132,31 @@ function borrarProducto(){
 	}
 }
 
+//Antes de editar debo buscar el registro que quiero cambiar
 function buscarProducto(){
+
+	//Saco el id que quiero buscar
 	var idBuscar = document.getElementById("idBuscar").value;
+
+	//Recojo la tabla para manipularla
 	var tabla = document.getElementById("tablaBodyProductos");
+
+	//Saco filas para recorrer con un for
 	var numRegistros =  tabla.rows.length;
+
+	//Bandera que uso para hacer visibles los campos de edicion
 	var flagBuscar =false;
 
+	//Si la tabla está vacia no tiene sentido buscar
 	if(numRegistros == 0){
 		alert("Te das cuenta de que estás intentando buscar en una tabla vacía... verdad?");
 	}else{
+
+		//Sino recorro la tabla
 		for(var r = 0; r < numRegistros; r++){
+
+			//Si he encontrado registro muestro los datos de ese registro
+			//en los campos donde voy a dejar que se modifique
 			if(tabla.rows[r].firstChild.innerHTML == idBuscar){
 				flagBuscar = true;
 				document.getElementById("idEdita").value = tabla.rows[r].cells[0].innerHTML;
@@ -136,11 +167,15 @@ function buscarProducto(){
 			}
 	    }
 
+	    //Si he encontrado registro, dejo visble los campos donde modificarlo
 	    if(flagBuscar){
 			document.getElementById("camposModifica").style.display = "block";
 			alert("Producto encontrado! Puedes modificarlo más abajo.");
 		}else{
 			alert("No hay ningún producto con ese id.");
+
+			//Por seguridad si has realizado una busqueda antes y tienes activados los campos y la siguiente
+			//busqueda que haces no tiene exito.
 			document.getElementById("camposModifica").style.display = "none";
 		}
 	}
@@ -148,20 +183,22 @@ function buscarProducto(){
 
 function editarProducto(){
 
-	/*var idEditado = document.getElementById("idEditar").value;
-	var nomEditado = document.getElementById("nombreEdita").value;
-	var cantEditado = document.getElementById("cantidadEdita").value;
-	var descEditado = document.getElementById("descripcionEdita").value;*/
-
+	//Saco el id del registro que quiero editar
 	var idBuscar = document.getElementById("idEdita").value;
-	var tabla = document.getElementById("tablaBodyProductos");
-	var numRegistros =  tabla.rows.length;
-	var flagBuscar =false;
 
-	
+	//Recojo la tabla para manipularla
+	var tabla = document.getElementById("tablaBodyProductos");
+
+	//Saco filas para recorrer con un for
+	var numRegistros =  tabla.rows.length;
+
+	//aqui no hace falta verificar filas porque ya se ha buscado anteriormente el registro a editar
 	for(var r = 0; r < numRegistros; r++){
+
+		//Estando situados en la fila cambiamos la bandera
 		if(tabla.rows[r].firstChild.innerHTML == idBuscar){
-			flagBuscar = true;
+
+			//Cambio las celdas correspondientes menos el id que por seguridad no se deja cambiar
 			tabla.rows[r].cells[1].innerHTML = document.getElementById("nombreEdita").value;
 			tabla.rows[r].cells[2].innerHTML = document.getElementById("cantidadEdita").value;
 			tabla.rows[r].cells[3].innerHTML = document.getElementById("descripcionEdita").value;
@@ -169,13 +206,13 @@ function editarProducto(){
 		}
     }
 
+    //Aviso de exito y oculto los campos de modificacion
     alert("Has modificado el producto correctamente");
     document.getElementById("camposModifica").style.display = "none";
     
 }
 
-	
-
+//Funcion para ocultar y mostrar el menu reducido
 function toogleMenu(){
 
 	if(document.getElementById("menuRopciones").style.display == "block"){
@@ -185,10 +222,13 @@ function toogleMenu(){
 	}
 }
 
+//Mensaje de advertencia si se toca el campo de id de la edicion (en el caso de
+//que se pudiera tocar esta protegido con readonly)
 function mensajeEdita(){
 	alert("Por seguridad no se permite editar el identificador");
 }
 
+//Mensaje si se tocan otras opciones del nav
 function wip(){
 	alert("Seccion en construcción");
 }

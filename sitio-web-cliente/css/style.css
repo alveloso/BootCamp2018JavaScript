@@ -183,6 +183,7 @@ body{
 			background-color: rgba(163,163,163,0.2);
 			width: 50%;
 			margin:0 auto;
+			margin-left: 25%;
 			border-radius: 5px;
 			margin-bottom: 3%;
 		}
@@ -195,6 +196,7 @@ body{
 			background-color: rgba(163,163,163,0.2);
 			width: 50%;
 			margin:0 auto;
+			margin-left: 25%;
 			border-radius: 5px;
 			margin-bottom: 3%;
 		}
@@ -207,6 +209,7 @@ body{
 			width: 50%;
 			margin:0 auto;
 			margin-bottom: 3%;
+			margin-left: 25%;
 			border-radius: 5px;
 		}
 
