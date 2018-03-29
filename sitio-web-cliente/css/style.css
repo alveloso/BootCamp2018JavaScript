@@ -46,6 +46,7 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+
 }
 /*FIN PUESTA A CERO*/
 
@@ -255,6 +256,7 @@ body{
 		table{
 			width: 100%;
 			color: white;
+			margin-bottom: 20px;
 		}
 			/*ESTILOS THEAD*/
 			.encabezadoTabla{
@@ -366,6 +368,18 @@ body{
 	.menuRopciones .activo{
 		color:black;
 		text-decoration: none;
+	}
+
+	.col1{
+		margin: 0 auto;
+	}
+
+	.col2{
+		margin: 0 auto;
+	}
+
+	.col3{
+		margin: 0 auto;
 	}
 }
 
