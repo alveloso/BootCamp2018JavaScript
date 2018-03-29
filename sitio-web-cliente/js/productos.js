@@ -93,8 +93,30 @@ function addLineToHTMLTable(producto, referenciaTable) {
 //Funciones para borrar producto
 function borrarProducto(){
 
-	document.getElementById("myTable").deleteRow(0); 
+	var idBorrar = document.getElementById("idBorrar").value;
+	var tabla = document.getElementById("tablaBodyProductos");
+	var numRegistros =  tabla.rows.length;
+	var flagBorrar =false;
+
+	if(numRegistros == 0){
+		alert("Te das cuenta de que estás intentando borrar en una tabla vacía... verdad?");
+	}else{
+		for(var r = 0; r < numRegistros; r++){
+			if(tabla.rows[r].firstChild.innerHTML == idBorrar){
+				flagBorrar = true;
+				break;
+			}
+	    }
+
+	    if(flagBorrar){
+			tabla.deleteRow(r);
+		}else{
+			alert("No hay ningún producto con ese id.");
+		}
+	}
 }
+
+	
 
 function toogleMenu(){
 
@@ -103,4 +125,8 @@ function toogleMenu(){
 	}else{
 		document.getElementById("menuRopciones").style.display = "block";
 	}
+}
+
+function wip(){
+	alert("Seccion en construcción");
 }
