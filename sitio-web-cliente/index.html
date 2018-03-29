@@ -84,9 +84,9 @@
 					</div>
 
 					<form action="#">
-							<div class="campoForm">
-								<input type="text" name="idBorrar" id="idBorrar" placeHolder=" Id producto">
-							</div>
+						<div class="campoForm">
+							<input type="text" name="idBorrar" id="idBorrar" placeHolder=" Id producto">
+						</div>
 					</form>
 
 					<input class="boton" type="button" name="botonBorrar" value="Eliminar" onclick="borrarProducto()">
@@ -98,22 +98,39 @@
 					</div>
 
 					<form action="#">
-							<div class="campoForm">
-								<input type="text" name="idProducto" id="idProducto" placeHolder=" Id producto">
-							</div>
-							<div class="campoForm">
-								<input type="text" name="nombreProducto" id="nombreProducto" placeholder=" Nombre">
-							</div>
-							<div class="campoForm">
-								<input type="number" name="cantidad" id="cantidad" placeholder=" Cantidad">
-							</div>
+						<div class="campoForm">
+							<input type="text" name="idBuscar" id="idBuscar" placeHolder=" Id búsqueda">
+						</div>
 
-							<div class="campoForm">
-								<textarea  rows="5" cols="18" name="descripcion" id="descripcion" placeholder=" Descripcion"></textarea>
-							</div>
+						<input type="button" class="boton" name="botonEditar" value="Buscar producto" onclick="buscarProducto()">
 					</form>
 
-					<input type="button" class="boton" name="botonEditar" value="Editar" onclick="editarProducto()">
+					
+
+					<form action="#" id="camposModifica">
+
+						<div class="divSepara"></div>
+
+						<div class="campoForm">
+							<input type="text" name="idEdita" id="idEdita" placeHolder=" Id producto" readonly onclick="mensajeEdita()">
+						</div>
+						<div class="campoForm">
+							<input type="text" name="nombreEdita" id="nombreEdita" placeholder=" Nombre">
+						</div>
+						<div class="campoForm">
+							<input type="number" name="cantidadEdita" id="cantidadEdita" placeholder=" Cantidad">
+						</div>
+
+						<div class="campoForm">
+							<textarea  rows="5" cols="18" name="descripcionEdita" id="descripcionEdita" placeholder=" Descripcion"></textarea>
+						</div>
+
+						<input type="button" class="boton" name="botonEditar" value="Editar" onclick="editarProducto()">
+
+
+					</form>
+
+					
 				</div>
 				
 			</div>

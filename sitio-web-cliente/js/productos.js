@@ -116,6 +116,64 @@ function borrarProducto(){
 	}
 }
 
+function buscarProducto(){
+	var idBuscar = document.getElementById("idBuscar").value;
+	var tabla = document.getElementById("tablaBodyProductos");
+	var numRegistros =  tabla.rows.length;
+	var flagBuscar =false;
+
+	if(numRegistros == 0){
+		alert("Te das cuenta de que estás intentando buscar en una tabla vacía... verdad?");
+	}else{
+		for(var r = 0; r < numRegistros; r++){
+			if(tabla.rows[r].firstChild.innerHTML == idBuscar){
+				flagBuscar = true;
+				document.getElementById("idEdita").value = tabla.rows[r].cells[0].innerHTML;
+				document.getElementById("nombreEdita").value = tabla.rows[r].cells[1].innerHTML;
+				document.getElementById("cantidadEdita").value = tabla.rows[r].cells[2].innerHTML;
+				document.getElementById("descripcionEdita").value = tabla.rows[r].cells[3].innerHTML;
+				break;
+			}
+	    }
+
+	    if(flagBuscar){
+			document.getElementById("camposModifica").style.display = "block";
+			alert("Producto encontrado! Puedes modificarlo más abajo.");
+		}else{
+			alert("No hay ningún producto con ese id.");
+			document.getElementById("camposModifica").style.display = "none";
+		}
+	}
+}
+
+function editarProducto(){
+
+	/*var idEditado = document.getElementById("idEditar").value;
+	var nomEditado = document.getElementById("nombreEdita").value;
+	var cantEditado = document.getElementById("cantidadEdita").value;
+	var descEditado = document.getElementById("descripcionEdita").value;*/
+
+	var idBuscar = document.getElementById("idEdita").value;
+	var tabla = document.getElementById("tablaBodyProductos");
+	var numRegistros =  tabla.rows.length;
+	var flagBuscar =false;
+
+	
+	for(var r = 0; r < numRegistros; r++){
+		if(tabla.rows[r].firstChild.innerHTML == idBuscar){
+			flagBuscar = true;
+			tabla.rows[r].cells[1].innerHTML = document.getElementById("nombreEdita").value;
+			tabla.rows[r].cells[2].innerHTML = document.getElementById("cantidadEdita").value;
+			tabla.rows[r].cells[3].innerHTML = document.getElementById("descripcionEdita").value;
+			break;
+		}
+    }
+
+    alert("Has modificado el producto correctamente");
+    document.getElementById("camposModifica").style.display = "none";
+    
+}
+
 	
 
 function toogleMenu(){
@@ -125,6 +183,10 @@ function toogleMenu(){
 	}else{
 		document.getElementById("menuRopciones").style.display = "block";
 	}
+}
+
+function mensajeEdita(){
+	alert("Por seguridad no se permite editar el identificador");
 }
 
 function wip(){
