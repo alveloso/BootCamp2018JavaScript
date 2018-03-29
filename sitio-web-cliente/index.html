@@ -1,78 +1,149 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Index</title>
+		<title>PRACTICA JAVASCRIPT</title>
 		<meta charset="utf-8">
 		<!--Comentarioooooo-->
 		<link rel="stylesheet" type="text/css" href="./css/style.css">
-		
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+		
+
 	</head>
 	<body>
-		<nav>
+		<div class="menuN">
+			<nav>
+				<ul>
+					<li><a href="#">INICIO</a></li>
+					<li><a href="#">CLIENTES</a></li>
+				 	<li><a href="#" class="activo">PRODUCTOS</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+
+		
+
+		<div class="menuR">
+			<img class="logoMenu" src="./img/menu.png" onclick="toogleMenu()">
+		</div>
+
+		<div class="menuRopciones" id="menuRopciones">
 			<ul>
-			  <li><a href="./html/form.html">PRODUCTOS</a></li>
+				<li><a href="#">INICIO</a></li>
+				<li><a href="#">CLIENTES</a></li>
+			 	<li><a href="#" class="activo">PRODUCTOS</a></li>
 			</ul>
-		</nav>
-
-		<div class="div-title">
-			<h1>PRODUCTOS</h1>
-		</div>
-		<div class="div-adorno"></div>
-
-		<div class="leftCol">
-			<div class="div-title">
-				<h2>FORMULARIO</h2>
-			</div>
-			<div class="div-formulario">
-				<form action="#">
-					<div class="div-campoForm">
-						<input type="text" name="idProducto" id="idProducto" placeHolder="Id producto">
-					</div>
-					<div class="div-campoForm">
-						<input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre">
-					</div>
-					<div class="div-campoForm">
-						<input type="number" name="cantidad" id="cantidad" placeholder="Cantidad">
-					</div>
-
-					<div class="div-campoForm">
-						<textarea  rows="5" cols="18" name="descripcion" id="descripcion" placeholder="Descripcion"></textarea>
-					</div>
-				</form>
-			</div>
-
-			<div class="div-acciones">
-				<input type="button" name="botonAniadir" value="Añadir" onclick="aniadirProducto()">
-				<input type="button" name="botonAniadir" value="Eliminar">
-				<input type="button" name="botonAniadir" value="Actualizar">
-			</div>
 		</div>
 
-		<div class="rightCol">
-			<div class="div-title">
-				<h2>LISTADO DE PRODUCTOS</h2>
+		<div class="divEncabezado">
+			<div class="divTitle">
+				PRODUCTOS
 			</div>
-			<div class="tablaProductos">
-				<table>
-					<thead>
-						<th>Id producto</th>
-						<th>Nombre</th>
-						<th>Cantidad</th>
-						<th>Descripción</th>
-					</thead>
-					<tbody id="tablaBodyProductos">
-						
-					</tbody>
-				</table>
-			</div>
+			<div class="divAdorno"></div>
 		</div>
 
-		<div class="div-corte"></div>
+		<div class="cuerpo">
+
+			<div class="divLeftCol">
+				<div class="col1">
+					
+					<div class="div-formulario">
+
+						<div class="titleCol">
+							AÑADIR PRODUCTO
+						</div>
+
+						<form action="#">
+							<div class="campoForm">
+								<input type="text" name="idProducto" id="idProducto" placeHolder=" Id producto">
+							</div>
+							<div class="campoForm">
+								<input type="text" name="nombreProducto" id="nombreProducto" placeholder=" Nombre">
+							</div>
+							<div class="campoForm">
+								<input type="number" name="cantidad" id="cantidad" placeholder=" Cantidad">
+							</div>
+
+							<div class="campoForm">
+								<textarea  rows="5" cols="18" name="descripcion" id="descripcion" placeholder=" Descripcion"></textarea>
+							</div>
+
+							<input class="boton" type="button" name="botonAniadir" value="Añadir" onclick="aniadirProducto()">
+						</form>
+					</div>
+				</div>
+
+				<div class="col2">
+					<div class="titleCol">
+						BORRAR PRODUCTO
+					</div>
+
+					<form action="#">
+							<div class="campoForm">
+								<input type="text" name="idBorrar" id="idBorrar" placeHolder=" Id producto">
+							</div>
+					</form>
+
+					<input class="boton" type="button" name="botonBorrar" value="Eliminar" onclick="borrarProducto()">
+				</div>
+
+				<div class="col3">
+					<div class="titleCol">
+						EDITAR PRODUCTO
+					</div>
+
+					<form action="#">
+							<div class="campoForm">
+								<input type="text" name="idProducto" id="idProducto" placeHolder=" Id producto">
+							</div>
+							<div class="campoForm">
+								<input type="text" name="nombreProducto" id="nombreProducto" placeholder=" Nombre">
+							</div>
+							<div class="campoForm">
+								<input type="number" name="cantidad" id="cantidad" placeholder=" Cantidad">
+							</div>
+
+							<div class="campoForm">
+								<textarea  rows="5" cols="18" name="descripcion" id="descripcion" placeholder=" Descripcion"></textarea>
+							</div>
+					</form>
+
+					<input type="button" class="boton" name="botonEditar" value="Editar" onclick="editarProducto()">
+				</div>
+				
+			</div>
+
+			<div class="divRightCol">
+				<div class="divEncabezado2">
+					<div class="divTitle">
+						LISTADO DE PRODUCTOS
+					</div>
+					<div class="divAdorno2"></div>
+				</div>
+				<div class="tablaProductos">
+					<table>
+						<thead>
+							<th class="encabezadoTabla">Id producto</th>
+							<th class="encabezadoTabla">Nombre</th>
+							<th class="encabezadoTabla">Cantidad</th>
+							<th class="encabezadoTabla">Descripción</th>
+						</thead>
+						<tbody id="tablaBodyProductos">
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+		</div>
+		
+
+		
 
 		<script src="./js/productos.js"></script>
 	</body>

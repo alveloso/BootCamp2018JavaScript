@@ -1,148 +1,361 @@
+/*PUESTA A CERO*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*FIN PUESTA A CERO*/
+
+
+/*ESTILOS BODY*/
 body{
 	background-image: url(../img/fondo.jpg);
-	color:white;
+    background-attachment: fixed;
 }
+	.cuerpo{
+		width: 98%;
+		margin: 0 auto;
+	}
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
+	/*ESTILOS NAV*/
+	.menuR{
+		display: none;
+	}
 
-}
+	.menuRopciones{
+		display: none;
+	}
 
-li {
-    float: left;
-}
+	nav ul {
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	    overflow: hidden;
+	    background-color: white;
+	}
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-}
+	.activo{
+		color: black;
+	}
 
-li a:hover {
-    background-color: #111111;
-}
+	nav li {
+	    float: left;
+	}
 
+	nav li a {
+	    display: block;
+	    color:gray;
+	    text-align: center;
+	    padding: 16px;
+	    text-decoration: none;
+	    font-weight: bold;
+	}
 
-.div-title{
-	text-align: center;
-}
+	nav li a:hover {
+	    text-decoration: none;
+	    font-weight: bold;
+	    color: black;
+	}
 
-.div-adorno{
-    width: 25%;
-    height:3px;
-    background-color: #696969;
-    margin: 0 auto;
-    border-radius: 99%;
-}
+	nav li a:visited {
+	    text-decoration: none;
+	}
 
+	nav li a:link {
+	    text-decoration: none;
+	    color:gray;
+	}
 
-.div-enlace{
-	text-align: center;
-	padding-top: 20px;
-}
+	nav li a:active {
+	    text-decoration: none;
+	    color:gray;
+	}
 
-.div-tabla{
-	padding: 20px 0;
-}
+	/*FIN ESTILOS NAV*/
 
-table{
-	margin: 0 auto;
-}
+	/*ESTILOS ENCABEZADO*/
+	.divEncabezado{
+		text-align: center;
+		margin: 20px auto;
+		color: white;
+	}
 
-.div-formulario{
-	padding: 20px 0;
-	text-align: center;
-	width:50%;
-	margin: 10px auto;
-	background-color: rgba(69,69,69,0.2);
-	border-radius: 15px;
-}
+	.divTitle{
+		font-size: 2.5vmin;
+		font-size: 2.5vmax;
+		/*Con el vmax no se me reescala con el height*/
+		/*Dificil de controlar con estos parametros pero buen apaño*/
+		color:white;
+	}
 
-.div-campoForm{
-	display: block;
-	padding: 10px 0;
-}
+	.divAdorno{
+		height: 2px;
+		background-color: #4da6ff;
+		width: 25%;
+		margin:0 auto;
 
-.div-enviar{
-	padding-top: 20px;
-	text-align: center;
-}
+	}
+	/*FIN ESTILOS ENCABEZADO*/
 
-.seccion_apartados{
+	/*ESTILOS LEFTCOL*/
+	.divLeftCol{
+		text-align: center;
+		float:left;
+		width: 50%;
+	}
 
-	margin:0 auto;
+	.titleCol{
+		font-size: 2vmin;
+		font-size: 2vmax;
+		color:white;
+		padding-top: 5px;
+		padding-bottom: 5px;
+
+	}
+
+	.boton{
+		margin-bottom: 3%;
+		cursor: pointer;
+		border:none;
+	}
+
+	.campoForm{
+		margin-bottom: 3%;
+	}
+
+	.campoForm input{
+		width: 80%;
+		border-radius: 5px;
+		border:none;
+	}
+
+	.campoForm textarea{
+		width: 80%;
+		border-radius: 5px;
+		border:none;
+	}
+
+		/*ESTILOS COL1*/
+		.col1{
+			background-color: rgba(163,163,163,0.2);
+			width: 50%;
+			margin:0 auto;
+			border-radius: 5px;
+			margin-bottom: 3%;
+		}
+
+		/*FIN ESTILOS COL1*/
+
+		/*ESTILOS COL2*/
+
+		.col2{
+			background-color: rgba(163,163,163,0.2);
+			width: 50%;
+			margin:0 auto;
+			border-radius: 5px;
+			margin-bottom: 3%;
+		}
+		/*FIN ESTILOS COL2*/
+
+		/*ESTILOS COL3*/
+
+		.col3{
+			background-color: rgba(163,163,163,0.2);
+			width: 50%;
+			margin:0 auto;
+			margin-bottom: 3%;
+		}
+		/*FIN ESTILOS COL3*/
 	
+	/*FIN ESTILOS LEFTCOL*/
+
+	/*ESTILOS RIGHTCOL*/
+	.divRightCol{
+		text-align: center;
+		float:left;
+		width: 50%;.
+		margin-bottom: 30px;
+	}
+
+	.divEncabezado2{
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		color: white;
+	}
+
+	.divAdorno2{
+		height: 2px;
+		background-color: #4da6ff;
+		width: 70%;
+		margin:0 auto;
+	}
+
+		/*ESTILOS TABLE*/
+		table{
+			width: 100%;
+			color: white;
+		}
+			/*ESTILOS THEAD*/
+			.encabezadoTabla{
+				text-align: center;
+				vertical-align: middle;
+				padding-bottom: 5px;
+				border-bottom: 2px solid #4da6ff;
+			}
+
+			/*FIN ESTILOS THEAD*/
+
+			/*CONTENIDO TBODY*/
+
+			td{
+				width: 25%;
+				padding: 2% 2%;
+				vertical-align: middle;
+				background-color: rgba(163,163,163,0.2);
+				border-bottom: 2px solid #4da6ff;
+				word-break: break-all;
+				height: 50px;
+			}
+
+			td:hover{
+				background-color: rgba(77,166,255,1);
+			}
+
+
+
+			/*FIN CONTENIDO TBODY*/
+
+		/*FIN ESTILOS TABLE*/
+
+	/*FIN ESTILOS RIGHTCOL*/
+
+/*FIN ESTILOS BODY*/
+
+@media only screen and (max-width:680px){
+	/*ESTILOS LEFTCOL*/
+	.divLeftCol{
+		float:none;
+		width: 90%;
+		margin: 0 auto;
+	}
+	/*FIN ESTILOS LEFTCOL*/
+
+	/*ESTILOS RIGHTCOL*/
+	.divRightCol{
+		float:none;
+		width: 90%;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+
+	.divEncabezado2{
+		margin: 20px auto;
+	}
+
+	.divAdorno2{
+		height: 2px;
+		background-color: #4da6ff;
+		width: 40%;
+		margin:0 auto;
+	}
+	/*FIN ESTILOS RIGHTCOL*/
 }
 
-.div-apartados{
-	overflow: auto;
-	width: 80%;
-	margin: 0 auto;
 
+@media only screen and (max-width:400px){
+	.menuN{
+		display: none;
+	}
 
+	.menuR{
+		display: block;
+		width: 30%;
+		margin: 0 auto;
+		text-align: center;
+		padding: 10px 0;
+	}
+
+	.menuRopciones{
+		background-color: rgba(163,163,163,0.2);
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+	    text-decoration: none;
+	    font-weight: bold;
+	}
+
+	.menuRopciones a{
+		color:gray;
+		text-decoration: none;
+	}
+
+	.menuRopciones a:hover{
+		text-decoration: none;
+		color:black;
+	}
+
+	.menuRopciones a:visited{
+		text-decoration: none;
+	}
+
+	.menuRopciones a:link{
+		text-decoration: none;
+	}
+
+	.menuRopciones .activo{
+		color:black;
+		text-decoration: none;
+	}
 }
 
-.div-apartados .apartado{
-	width: 30%;
-	height: 200px;
-	background-color: rgba(69,69,69,0.2);
-	float: left;
-	text-align: center;
-	margin: 0 10px;
-	border-radius: 15px;
+@media only screen and (max-width:370px){
 
-}
-
-.div-corte{
-	clear: both;
-}
-
-.div-operaciones{
-	text-align: center;
-	border-top: 1px solid white;
-}
-
-.calculadora{
-	text-align: center;
-}
-
-.div-acciones{
-    padding: 20px 0;
-    text-align: center;
-    width:50%;
-    margin: 10px auto;
-    background-color: rgba(69,69,69,0.2);
-    border-radius: 15px;
-}
-
-.leftCol{
-    width: 50%;
-    float: left;
-}
-
-.rightCol{
-    width: 50%;
-    float: left;
-}
-
-.tablaProductos th{
-    padding: 10px 10px;
-    text-align: center;
-}
-
-.tablaProductos td{
-    padding: 10px 10px;
-    text-align: center;
-    
-}
-
-#tablaBodyProductos{
-    background-color: rgba(69,69,69,0.2);
-    border-radius: 15px;   
+	/*ESTILOS THEAD*/
+	th{
+		font-size: 12px;
+	}
 }

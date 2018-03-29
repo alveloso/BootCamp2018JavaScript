@@ -48,6 +48,7 @@ function iniciar(){
 
 /* Fin clases------------------------------------*/
 
+/*Funciones para añadir producto*/
 function aniadirProducto(){
 
 	var idNuevoProd = document.getElementById("idProducto").value;
@@ -85,4 +86,21 @@ function addLineToHTMLTable(producto, referenciaTable) {
 
    var lastNameCell   = newRow.insertCell();
    lastNameCell.innerHTML = producto.descripcion;
+}
+
+//Fin de funciones para añadir producto
+
+//Funciones para borrar producto
+function borrarProducto(){
+
+	document.getElementById("myTable").deleteRow(0); 
+}
+
+function toogleMenu(){
+
+	if(document.getElementById("menuRopciones").style.display == "block"){
+		document.getElementById("menuRopciones").style.display = "none";
+	}else{
+		document.getElementById("menuRopciones").style.display = "block";
+	}
 }
