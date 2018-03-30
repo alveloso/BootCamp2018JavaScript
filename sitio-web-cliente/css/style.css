@@ -376,14 +376,17 @@ body{
 
 	.col1{
 		margin: 0 auto;
+		margin-bottom: 3%;
 	}
 
 	.col2{
 		margin: 0 auto;
+		margin-bottom: 3%;
 	}
 
 	.col3{
 		margin: 0 auto;
+		margin-bottom: 3%;
 	}
 }
 
