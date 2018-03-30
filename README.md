@@ -12,6 +12,6 @@ Se ha tenido en cuenta mediante css que el contenido se adapte a la resolución 
 
 ![Imágen 1](https://i.imgur.com/iAXNHV4.jpg)
 
-![Imágen 2](https://imgur.com/jMlnXxH "Imágen 2")
+![Imágen 2](https://i.imgur.com/jMlnXxH.jpg)
 
-![Imágen 3](https://imgur.com/OEClAeH "Imágen 3")
+![Imágen 3](https://i.imgur.com/OEClAeH.jpg)
