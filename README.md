@@ -8,7 +8,7 @@ Práctica realizada bajo html/css/javascript cuyo objetivo consiste en la realiz
   
 Para eliminar un elemento se debe proporcionar el identificador de ese elemento. Para editar un registro previamente se busca si ese identificador se encuentra en la tabla. Una vez encontrado se muestran campos de edición que contendrán los datos del registro que se pretende modificar.
 
-Se ha tenido en cuenta mediante css que el contenido se adapte a la resolución de la pantalla, como puede verse a continuación.
+Se ha tenido en cuenta mediante css que todo el contenido (cajas y texto) se adapte a la resolución de la pantalla, como puede verse a continuación.
 
 ![Imágen 1](https://i.imgur.com/iAXNHV4.jpg)
 
