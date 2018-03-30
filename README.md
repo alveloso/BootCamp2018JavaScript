@@ -10,8 +10,8 @@ Para eliminar un elemento se debe proporcionar el identificador de ese elemento.
 
 Se ha tenido en cuenta mediante css que el contenido se adapte a la resolución de la pantalla, como puede verse a continuación.
 
-!(https://imgur.com/lb484vn)
+![Imágen 1](https://imgur.com/lb484vn "Imágen 1")
 
-!(https://imgur.com/urkYUvF)
+![Imágen 2](https://imgur.com/urkYUvF "Imágen 2")
 
-!(https://imgur.com/hf1bCpy)
+![Imágen 3](https://imgur.com/hf1bCpy "Imágen 3")
